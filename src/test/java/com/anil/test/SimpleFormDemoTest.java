@@ -20,8 +20,7 @@ public class SimpleFormDemoTest extends BaseWebdriver {
     {	
 		
 		// committing with git changes.
-		//add ahi
-		//hk
+		// commit 2
 		log.debug("Inside Input Field Test");
 		log.debug("Text filed"+message);
 		//driver.findElement(By.xpath(OR.getProperty("Homelink"))).click();
