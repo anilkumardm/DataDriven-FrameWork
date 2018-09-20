@@ -1,0 +1,16 @@
+20/09/2018 10:38:12 devpinoyLogger Config file loaded 
+20/09/2018 10:38:12 devpinoyLogger OR file loaded 
+20/09/2018 10:38:20 devpinoyLogger Chroma Launched
+20/09/2018 10:38:26 devpinoyLogger Application Launched->http://www.seleniumeasy.com/test/
+20/09/2018 10:38:28 devpinoyLogger Inside start Link
+20/09/2018 10:38:28 devpinoyLogger start Link clicked successfully
+20/09/2018 10:38:34 devpinoyLogger Displayed Header Text->Assuming you have a basic understanding of HTML and CSS.
+20/09/2018 10:38:35 devpinoyLogger Inside Data provider
+20/09/2018 10:38:35 devpinoyLogger Rowcount-->2
+20/09/2018 10:38:35 devpinoyLogger column count3
+20/09/2018 10:38:35 devpinoyLogger Inside Input Field Test
+20/09/2018 10:38:35 devpinoyLogger Text filedI am anil
+20/09/2018 10:38:37 devpinoyLogger clicked sample link
+20/09/2018 10:38:42 devpinoyLogger I am anil
+20/09/2018 10:38:42 devpinoyLogger 10.0
+20/09/2018 10:38:43 devpinoyLogger 20.0
