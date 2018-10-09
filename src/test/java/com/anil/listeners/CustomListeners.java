@@ -16,13 +16,15 @@ import org.testng.Reporter;
 import org.testng.SkipException;
 
 import com.anil.base.BaseWebdriver;
+import com.anil.utilities.MonitoringMail;
+import com.anil.utilities.TestConfig;
 import com.anil.utilities.TestUtils;
 import com.relevantcodes.extentreports.LogStatus;
 
 
 
-public class CustomListeners extends BaseWebdriver implements ITestListener {
-
+public class CustomListeners extends BaseWebdriver implements ITestListener,ISuiteListener{
+	String messageBody;
 	public void onFinish(ITestContext arg0) {
 		// TODO Auto-generated method stub
 		
@@ -79,6 +81,35 @@ public class CustomListeners extends BaseWebdriver implements ITestListener {
 		test.log(LogStatus.PASS, arg0.getName().toUpperCase()+"PASS");
 	    rep.endTest(test);
 	    rep.flush();
+		
+	}
+
+	public void onFinish(ISuite arg0) {
+		// TODO Auto-generated method stub
+		MonitoringMail mail=new MonitoringMail();
+		
+		try {
+			messageBody = "http://"+InetAddress.getLocalHost().getHostAddress()+":8080/job/DataDrivenFramework/Extent_20Reports/";
+		} catch (UnknownHostException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+  //System.out.println(hostname);
+  
+    try {
+		mail.sendMail(TestConfig.server, TestConfig.from, TestConfig.to, TestConfig.subject, messageBody);
+	} catch (AddressException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (MessagingException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+		
+	}
+
+	public void onStart(ISuite arg0) {
+		// TODO Auto-generated method stub
 		
 	}
 
