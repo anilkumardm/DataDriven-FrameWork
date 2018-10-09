@@ -89,7 +89,7 @@ public class CustomListeners extends BaseWebdriver implements ITestListener,ISui
 		MonitoringMail mail=new MonitoringMail();
 		
 		try {
-			messageBody = "http://"+InetAddress.getLocalHost().getHostAddress()+":8080/job/DataDrivenFramework/Extent_20Reports/";
+			messageBody = "http://"+InetAddress.getLocalHost().getHostAddress()+":8080/job/git-DataDriven-Framework/Extent_20reports//";
 		} catch (UnknownHostException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
